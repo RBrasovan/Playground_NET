@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+.container-fluid {
+  padding:0px !important;
+}
+.row {
+  padding: 0% 10%;
+  margin:0px !important;
+}
+section {
+  padding: 35px 0px;
+}
+.dark-section {
+  background-color: #343a40;
+  width:100%;
+  padding:20px;
+  color: #fff;
+}
+.blue-section {
+  background-color: #CBF2E3;
+}
+.white-section {
+  background-color: #FFFFFF;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: parisine-office-std, sans-serif;
+  font-weight: 600;
+}
+h1 {
+  font-size:3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+p {
+  font-weight: 200;
+	font-size: 1.6rem;
+  font-family: mr-eaves-modern, sans-serif;
+  line-height:100%;
+  margin-bottom:40px;
+}

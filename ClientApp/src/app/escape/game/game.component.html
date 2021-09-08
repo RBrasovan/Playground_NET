@@ -1,0 +1,25 @@
+<div class="mb-3" id="gameArea2" style="width: 70%; margin: auto">
+  <label for="gameArea" class="form-label">Escape!</label>
+  <div class="form-control" id="gameArea">
+    <div class="read" *ngFor="let i of this.inputs">{{ i }}</div>
+  </div>
+  <form [formGroup]="formgroup" (ngSubmit)="update()">
+    <input
+      class="form-control input"
+      type="text"
+      formControlName="input"
+      [ngStyle]="formgroup.controls.input.invalid && formgroup.controls.input.touched
+          ? { border: 'red solid 2px' }
+          : { border: 'none' }"
+      required
+      placeholder="Type here, player."
+      aria-label="type here"
+    />
+    <button
+      class="btn btn-primary"
+      [disabled]="formgroup.controls.input.invalid"
+      type="submit">
+      Submit
+    </button>
+  </form>
+</div>

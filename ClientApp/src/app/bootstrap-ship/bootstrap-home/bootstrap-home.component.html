@@ -1,0 +1,74 @@
+<div class=".container-fluid" id="top-section">
+  <nav class="navbar navbar-expand-xl navbar-light bg-dark"> <a id="logo-text" class="navbar-brand" href="#">Bootstrap</a>
+    <button class="navbar-toggler navbar-dark bg-dark" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav ml-auto mt-auto white-background">
+        <li class="nav-item"> <a class="nav-link" [routerLink]="['/']">Go Back Home</a> </li>
+        <li class="nav-item active"> <a class="nav-link" href="#">Bootstrap for Pirates<span class="sr-only">(current)</span></a> </li>
+        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Pirate Buddies </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a (click)="noWhere()" class="dropdown-item" href="#">Parrot</a> <a (click)="noWhere()" class="dropdown-item" href="#">Bootstrap Bill</a>
+            <div class="dropdown-divider"></div>
+            <a (click)="noWhere()" class="dropdown-item" href="#">SPECIAL: Big Ole Octopus</a> </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section id="title-section">
+    <div class="row" style="margin: 5% 0%;">
+      <div class="col-lg-6 col-md" style="margin: 3% 0%;">
+        <h1 class="font-weight-bold">Arrrr!</h1>
+        <h4>Ahoy, mateys.</h4>
+        <p class="font-weight-light">welcome to the bootstrap pirate ship</p>
+        <button (click)="noWhere()" class="btn btn-lg btn-dark btn-margin-top-right"><fa-icon [icon]="faCrossbones"></fa-icon> Crew Sign Up</button>
+        <button (click)="noBooty()" class="btn btn-lg btn-outline-dark btn-margin-top-right"><fa-icon [icon]="faGem"></fa-icon> Pirate Booty</button>
+      </div>
+      <div class="col-xl-6 text-center" style="margin: 3% 0%;"> <img src="assets/crossbones.png" alt="pirate cross bones" class="img-fluid large-image"> </div>
+    </div>
+  </section>
+</div>
+<section id="info-section">
+  <div class="container-fluid">
+    <div class="row" style="margin: 5%;">
+      <div class="col-md-4 text-center margin-top-mobile"><fa-icon [icon]="faBookDead" class="large-icon"></fa-icon>
+        <h3> Learn the Pirate Code</h3>
+        <p>Learn about plunderin' 'n ship manners wit' this code.</p>
+      </div>
+      <div class="col-md-4 text-center margin-top-mobile"><fa-icon [icon]="faSkull" class="large-icon"></fa-icon>
+        <h3> Fight Ye Enemies</h3>
+        <p>Fight those enemies that 'ave long since had it comin'.</p>
+      </div>
+      <div class="col-md-4 text-center margin-top-mobile"><fa-icon [icon]="faCoins" class="large-icon"></fa-icon>
+        <h3> Earn the Booty</h3>
+        <p>Be rewarded wit' riches 'n booty!</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="mid-section">
+  <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="6500" data-pause="hover">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <h4 class="font-weight-bold carousel-text"><span class="quotes-text">"</span>Aft signin' up wit' Bootstrap I didn' 'ave t' go lookin' fer booty alone. Th' fightin' be me fav'rit part though.<span class="quotes-text">"</span></h4>
+    </div>
+    <div class="carousel-item">
+      <h4 class="font-weight-bold carousel-text"><span class="quotes-text">"</span>I've ne'er seen so much booty in me life. Th' crew be also fantastic 'n I owe it all t' Bootstrap.<span class="quotes-text">"</span></h4>
+    </div>
+    <div class="carousel-item">
+      <h4 class="font-weight-bold carousel-text"><span class="quotes-text">"</span>Now me enemies quake afore me boots as I poke them wit' me cutlass. Wit' a crew like mine we be unstoppable.<span class="quotes-text">"</span></h4>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  <img class="small-image" src="../assets/pirate.png" alt="old chipper the pirate"><p style="display: inline; position: relative; top:40px;">Old Chipper</p>
+  </section>
+<section>
+
+  <!--  Shout out to: http://pirate.monkeyness.com/online_pirate_translator for helping me with Pirate Speak. Arr!  -->
+</section>
