@@ -29,12 +29,12 @@ export class GameComponent implements OnInit {
     //get stuff here
     /*this.gameService.getObjects().subscribe(o => {
       this.objects = o;
-    });*/
+    });
     this.gameService.getLocations().subscribe(l => {
       this.locations = l;
       console.log(this.locations)
     });
-
+*/
 
     this.currentLoc = this.locations[0];
     this.currentObjects = this.gameService.getObjectsAtLocation(

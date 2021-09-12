@@ -11,23 +11,27 @@ namespace Playground_NET.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class LocationController : ControllerBase
     {
-        private readonly LocationRepository _gameService;
+        private readonly LocationRepository _locationRepo;
 
-        public WeatherForecastController(LocationRepository gamesService)
+        public LocationController(LocationRepository locationRepo)
         {
-            _gameService = gamesService;
+            _locationRepo = locationRepo;
         }
 
-        [HttpGet]
-        public ActionResult<List<Location>> Get() =>
-            _gameService.Get();
+        [HttpGet("getlist", Name = "GetLocations")]
+        public ActionResult<List<Location>> Get()
+        {
+            var locations = _locationRepo.Get();
+            return locations;
+        }
+            
 
-        [HttpGet("{id}", Name = "GetGame")]
+        [HttpGet("{id}", Name = "GetLocationById")]
         public ActionResult<Location> Get(string id)
         {
-            var game = _gameService.Get(id);
+            var game = _locationRepo.Get(id);
 
             if (game == null)
             {

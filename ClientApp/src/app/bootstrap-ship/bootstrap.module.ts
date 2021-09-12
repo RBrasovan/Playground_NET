@@ -14,7 +14,7 @@ import {  RouterModule } from '@angular/router';
     CommonModule,
     FontAwesomeModule,
     RouterModule.forRoot([
-      { path: '', component: BootstrapHomeComponent },
+      { path: 'home', component: BootstrapHomeComponent },
     ])
   ],
 

@@ -29,7 +29,7 @@ import { BootstrapHomeComponent } from './bootstrap-ship/bootstrap-home/bootstra
     RouterModule.forRoot([
       { path: '',   component : HomeComponent, pathMatch: 'full' },
       {
-        path: '',
+        path: 'shared',
         loadChildren: () => import('./shared/shared.module').then(i => i.SharedModule)
       },
       {

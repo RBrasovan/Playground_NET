@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Locations } from '../models/locations';
 import { Objects } from '../models/objects';
@@ -11,15 +11,17 @@ export class GameService {
   locationsData : any;
   allObjects : Objects[] = [];
   allLocations: Locations[] = [];
+  private httpOptions = {
+    headers : new HttpHeaders({
+      'Content-Type' : 'applcation/json'
+    })
+  }
 
   constructor(private http: HttpClient, @Inject('BASE_URL') public baseUrl: string) { }
 
-  getObjects() {
-    return this.http.get<Objects[]>(this.baseUrl + 'weatherforecast');
-  }
 
   getLocations() {
-    return this.http.get<Locations[]>(this.baseUrl + 'weatherforecast');
+    return this.http.get<Location[]>(this.baseUrl + 'location/getlist', this.httpOptions);
 
   }
 
@@ -43,4 +45,9 @@ export class GameService {
     return this.locationsData.default.find(loc => loc.id == id);
   }
 
+
+}
+
+interface Location {
+  description: string[];
 }

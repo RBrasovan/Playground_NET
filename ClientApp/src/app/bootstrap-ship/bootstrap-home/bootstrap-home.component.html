@@ -3,12 +3,12 @@
     <button class="navbar-toggler navbar-dark bg-dark" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
     <div class="collapse navbar-collapse" id="navbarToggler">
       <ul class="navbar-nav ml-auto mt-auto white-background">
-        <li class="nav-item"> <a class="nav-link" [routerLink]="['/']">Go Back Home</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="">Go Back Home</a> </li>
         <li class="nav-item active"> <a class="nav-link" href="#">Bootstrap for Pirates<span class="sr-only">(current)</span></a> </li>
-        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Pirate Buddies </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a (click)="noWhere()" class="dropdown-item" href="#">Parrot</a> <a (click)="noWhere()" class="dropdown-item" href="#">Bootstrap Bill</a>
+        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-target="#collapse" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Pirate Buddies </a>
+          <div class="dropdown-menu" id="collapse" aria-labelledby="navbarDropdown"> <a (click)="noWhere()" class="dropdown-item">Parrot</a> <a (click)="noWhere()" class="dropdown-item">Bootstrap Bill</a>
             <div class="dropdown-divider"></div>
-            <a (click)="noWhere()" class="dropdown-item" href="#">SPECIAL: Big Ole Octopus</a> </div>
+            <a (click)="noWhere()" class="dropdown-item">SPECIAL: Big Ole Octopus</a> </div>
         </li>
       </ul>
     </div>
